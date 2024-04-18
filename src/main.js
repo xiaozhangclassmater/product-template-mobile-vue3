@@ -5,7 +5,6 @@ import App from './App.vue';
 import routerInstance from './router';
 let testA = 0
 
-
 const piniaInstance = createPinia()
 const appInstance = createApp(App)
 appInstance
