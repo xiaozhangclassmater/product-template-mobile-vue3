@@ -1,9 +1,15 @@
 <template>
   <div class="Home-wapper">
-    Home
-    <button @click="jumpPage">
+    <VanNavBar title="基金首页" />
+    <div>
+      Home
+    </div>
+    <VanButton
+      type="default"
+      @click="jumpPage"
+    >
       跳转
-    </button>
+    </VanButton>
   </div>
 </template>
 

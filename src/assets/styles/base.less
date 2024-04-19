@@ -1,5 +1,16 @@
 @import url('normalize.css');
 @import url('./mixins.less');
+@import url('vant/lib/index.css');
+@import url('nprogress/nprogress.css');
 body{
   font-size: 0.15rem;
+}
+
+#nprogress {
+  .bar{
+    background: @progressColor;
+    .peg{
+      box-shadow: 0 0 10px @progressColor, 0 0 5px @progressColor;
+    }
+  }
 }

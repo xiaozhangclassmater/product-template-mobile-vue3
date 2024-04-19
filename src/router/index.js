@@ -1,5 +1,9 @@
 import AppLayout from '@/Layout/index.vue'
+import NProgress from 'nprogress'
 import { createRouter, createWebHashHistory } from 'vue-router'
+NProgress.configure({
+    showSpinner: false
+})
 const routes = [
     {
         path: '/',
@@ -30,7 +34,7 @@ const routes = [
     {
         path: '/Details',
         meta:{
-            pageLevel: 1
+            pageLevel: 2
         },
         children:[
             {
@@ -47,5 +51,12 @@ const router = createRouter({
     routes,
 })
 
+router.beforeEach((to , from , next) => {
+    NProgress.start();
+    next()
+})
 
+router.afterEach(() => {
+    NProgress.done();
+})
 export default router

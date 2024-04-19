@@ -1,9 +1,9 @@
 <template>
   <div class="Details-wapper">
     Details
-    <button @click="backHandle">
+    <VanButton @click="backHandle">
       返回
-    </button>
+    </VanButton>
   </div>
 </template>
 

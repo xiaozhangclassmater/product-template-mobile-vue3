@@ -3,9 +3,9 @@ import { pageTransition } from '@/components';
 </script>
 
 <template>
-  <page-transition v-slot="slotProps">
+  <page-transition v-slot="{ transitionName }">
     <router-view v-slot="{ Component }">
-      <transition :name="slotProps.transitionName">
+      <transition :name="transitionName">
         <component :is="Component" />
       </transition>
     </router-view>

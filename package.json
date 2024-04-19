@@ -15,7 +15,9 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
+    "vant": "^4.8.11",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
   },

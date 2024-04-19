@@ -1,10 +1,14 @@
 <template>
   <div class="product-list-wapper">
+    <VanNavBar
+      title="理财列表"
+      left-text="返回"
+      @click-left="leftClickHandle"
+    />
     产品页面
-
-    <button @click="toDetails">
+    <VanButton @click="toDetails">
       跳转详情
-    </button>
+    </VanButton>
   </div>
 </template>
 
@@ -12,6 +16,9 @@
 import { useRouter } from 'vue-router';
 
 const router = useRouter()
+const leftClickHandle = () => {
+    router.back()
+}
 const toDetails = () => {
     router.push('/Details')
 }
@@ -20,6 +27,6 @@ const toDetails = () => {
 <style scoped lang="less">
 .product-list-wapper{
   height: 100vh;
-  background-color: #ccc;
+  background-color: #45c97c;
 }
 </style>
