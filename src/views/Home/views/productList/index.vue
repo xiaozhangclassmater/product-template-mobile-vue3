@@ -1,8 +1,9 @@
 <template>
-  <div class="Details-wapper">
-    Details
-    <button @click="backHandle">
-      返回
+  <div class="product-list-wapper">
+    产品页面
+
+    <button @click="toDetails">
+      跳转详情
     </button>
   </div>
 </template>
@@ -11,14 +12,14 @@
 import { useRouter } from 'vue-router';
 
 const router = useRouter()
-const backHandle = () => {
-    router.push('/')
+const toDetails = () => {
+    router.push('/Details')
 }
 </script>
 
 <style scoped lang="less">
-.Details-wapper{
+.product-list-wapper{
   height: 100vh;
-  background-color: #2b84b9;
+  background-color: #ccc;
 }
 </style>

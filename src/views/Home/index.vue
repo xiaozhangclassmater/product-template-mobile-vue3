@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="Home-wapper">
     Home
-    <button @click="jumpPage">跳转</button>
+    <button @click="jumpPage">
+      跳转
+    </button>
   </div>
 </template>
 
@@ -12,8 +14,13 @@ const store = useStore()
 const router = useRouter()
 console.log('store' , store.appStore);
 const jumpPage = () =>{
-  router.push('/Details')
+    router.push('/Home/productList')
 }
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.Home-wapper{
+  height: 100vh;
+  background-color: #ccc;
+}
+</style>

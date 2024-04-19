@@ -1,14 +1,17 @@
+
+
+<script lang="js" setup>
+import { pageTransition } from '@/components';
+</script>
+
 <template>
-  <div class="view-wapper">
+  <pageTransition v-slot="slotProps">
     <router-view v-slot="{ Component }">
-      <transition>
+      <transition :name="slotProps.transitionName">
         <component :is="Component" />
       </transition>
     </router-view>
-  </div>
+  </pageTransition>
 </template>
-
-<script lang="js" setup>
-</script>
 
 <style scoped lang="less"></style>
